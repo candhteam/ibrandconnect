@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.typekit.net/eai7eef.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
+  <title>iBrandConnect</title>
+<link href="main.css" rel="stylesheet"></head>
+<body>
+    <body>
+        <section class="registration">
+            <div class="registration-wrapper">
+                <div class="register-section">
+                    <div class="register-heading">
+                        <h1>Welcome to iBrandConnect Pro Content Creators Community</h1>
+                    </div>
+                <!--form starts-->
+                    <div class="form-section">
+                        <div class="form-heading">
+                            <h2 class="form-head">CREATE NEW <span>PRO MEMBER</span> ACCOUNT</h2>
+                            <form action="">
+                                <h3 class="form-subheading">Personal Information</h3>
+                                <div class="form-wrapper">
+                                    <div class="form-block">
+                                        <input type="text" class="form-field" id="name" placeholder="Name">
+                                        <div class="error-text"></div>
+                                    </div>
+    
+                                    <div class="form-block">
+                                        <input type="text" class="form-field" placeholder="Last Name">
+                                    </div>
+    
+                                    <div class="form-block">
+                                        <input type="email" id="mail" class="form-field" placeholder="Email">
+                                        <div class="error-text"></div>
+                                    </div>
+    
+                                    <div class="form-block">
+                                        <input type="number"  class="form-field" id="phone-input" placeholder="Enter phone number">
+                                    </div>
+    
+                                    <div class="select-block">
+                                        <select id="selectCountry" name="form-option">
+                                            <option value="photographer">Nationality</option>
+                                        </select>
+                                        <div class="error-text"></div>
+                                    </div>
+    
+                                    <div class="select-block">
+                                        <select name="form-option">
+                                            <option value="photographer">I am a Photographer</option>
+                                            <option value="photographer">I am a Designer</option>
+                                            <option value="Videographer">I am a Videographer</option>
+                                            <option value="fiat">I am a Content Creator</option>
+                                            <option value="fiat">I am a Graphic designer</option>
+                                            <option value="fiat">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <div class="checklist-wrapper">
+                                    <div class="checklist-section">
+                                        <div class="checklist-block">
+                                            <input type="checkbox" id="signup" name="signup" value="signup">
+                                            <label class="checklist-label" for="signup">Sign Up for Newsletter</label>
+                                        </div>
+                                        <div class="bullet-list">
+                                            <ul>
+                                                <li>Opt-in for the newsletter during registration or after completing the membership application. Check the box or follow the instructions to enable a newsletter subscription</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-section">
+                                        <div class="checklist-block">
+                                            <input type="checkbox" id="signup" name="signup" value="signup">
+                                            <label class="checklist-label" for="signup">Join Community WhatsApp Group</label>
+                                        </div>
+                                        <div class="bullet-list">
+                                            <ul>
+                                                <li>Contact the group administrator using the provided contact details. Send a message or provide your details (name, membership ID, etc.) to request access to the WhatsApp group. Follow any instructions provided by the administrator</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-form-block">
+                                    <input type="submit" value="Register" id="submit" class="submit-btn">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <!--form ends-->   
+        </section>
+    
+        <section class="success" id="successMessage">
+            <div class="success-wrapper">
+                <h2 class="success-heading">Welcome to iBrandConnect Pro Content Creators Community</h2>
+                <div class="success-block">
+                    <img src="./static/svg/success.svg" class="success-img" alt="">
+                    <p class="success-msg">Congrats! <br>You’ve got a coupon!</p>
+                </div> 
+                
+                <div class="coupon-wrapper">
+                    <div class="coupon-block">
+                        <p class="coupon-text">CKJ654321</p>
+                    </div>
+                        <a href="" class="copy-coupon">Copy Coupon code</a>
+                </div>
+    
+                <div class="back-to-home">
+                    <p class="success-msg">Redeem now at the</p>
+                    <a href="https://ibrandconnect.com/" class="success-msg link">iBrandConnect.com</a>
+                </div>
+            </div>   
+            <div class="reg-footer">
+                <p class="success-msg">Thanks for joining iBrandConnect Pro Content Creators Community!<br>Let’s soar together, empowering each other!</p>
+            </div>
+        </section>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+        <script>
+            //country code
+            const phoneInput = document.querySelector("#phone-input");
+            const flagContainer = document.querySelector("#flag-container");
+
+            // Initialize intlTelInput
+            const iti = window.intlTelInput(phoneInput, {
+            initialCountry: "auto",
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
+            });
+
+            // Update flag when country changes
+            phoneInput.addEventListener("countrychange", function() {
+            const countryCode = iti.getSelectedCountryData().iso2;
+            const flagIcon = `<div class="iti__flag iti__${countryCode.toLowerCase()}"></div>`;
+            flagContainer.innerHTML = flagIcon;
+            });
+
+        function checkData() {
+            var name = document.getElementById("name");
+            var mail = document.getElementById("mail");
+            var phone = document.getElementById("phone");
+            var nationality = document.getElementById("nationality");
+
+            var nameValue = name.value.trim();
+            var emailValue = mail.value.trim();
+            var phoneValue = phone.value.trim();
+            var nationalityValue = nationality.value.trim();
+
+            if (nameValue === "") {
+                setError(name, "This field is required");
+            } else {
+                setSuccess(name);
+            }
+
+            if (emailValue === "") {
+                setError(mail, "This field is required");
+            } else if (!isValidEmail(emailValue)) {
+                setError(mail, "Please enter a valid email address");
+            } else {
+                setSuccess(mail);
+            }
+
+            if (phoneValue === "") {
+                setError(phone, "This field is required");
+            } else {
+                setSuccess(phone);
+            }
+
+            if (nationalityValue === "") {
+                setError(nationality, "This field is required");
+            } else {
+                setSuccess(nationality);
+            }
+
+            if (nameValue !== "" && emailValue !== "" && phoneValue !== "" && nationalityValue !=="" ) {
+                displaySuccessMessage();
+                hideForm();
+            }
+        }
+
+    function setError(inputElement, msg) {
+        var errorBox = inputElement.nextElementSibling;
+        errorBox.textContent = msg;
+        errorBox.classList.add("error-text");
+    }
+
+    function setSuccess(inputElement) {
+        var errorBox = inputElement.nextElementSibling;
+        errorBox.textContent = "";
+        errorBox.classList.remove("error-text");
+    }
+
+    function isValidEmail(email) {
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+
+    function displaySuccessMessage() {
+        var successMessage = document.getElementById("successMessage");
+        successMessage.style.display = "flex";
+    }
+
+    function hideForm() {
+        var formHeading = document.querySelector(".registration");
+        formHeading.style.display = "none";
+    }
+
+    function redirectToHomePage() {
+    window.location.href = "index.html"; 
+}
+
+//Nationality selector
+var select = document.getElementById("selectCountry");    
+var countries = new Array("Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burma", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic", "Congo, Republic of the", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Greenland", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Mongolia", "Morocco", "Monaco", "Mozambique", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Samoa", "San Marino", " Sao Tome", "Saudi Arabia", "Senegal", "Serbia and Montenegro", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe");
+    
+    for (var i = 0; i < countries.length; i++) {    
+        var option = document.createElement("option"); 
+        var txt = document.createTextNode(countries[i]); 
+        option.appendChild(txt); 
+        option.setAttribute("value",countries[i]); 
+        select.insertBefore(option,select.lastChild);
+    
+    }
+
+document.addEventListener ('DOMContentLoaded', function() {
+    document.querySelector('select[name="selectCountry"]').onchange = alertCountry;
+     }, false);
+    
+function alertCountry(event) {
+    if(!event.target.value) alert('Please select a country');
+    else alert('You chose ' + event.target.value + '. Yay, grab a beer!');
+}
+</script>
+<script type="text/javascript" src="app.bundle.js"></script></body>
