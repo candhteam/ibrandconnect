@@ -1,0 +1,138 @@
+.marquee-wrapper{
+  text-align:center;
+  height:auto;
+  max-width: 600px;
+  @media screen and (max-width:1250px){
+    display:none;
+  }
+}
+.marquee-wrapper .containe{
+  overflow:hidden;
+  margin:0 auto !important;
+  text-align:center;
+  height: 100%;
+  display: flex;
+  
+}
+.marquee-inner span{
+  height:50%;
+}
+.marquee-wrapper .marquee-block{
+  width: 600px;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  float:left;
+}
+.marquee-inner{
+  display: block;
+  height: 200%;
+  width:600px;
+  position: absolute;
+
+}
+
+.community-images{
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+.marquee-inner.to-left{
+  animation: marqueeTop 60s linear infinite;
+}
+.marquee-inner.to-right{
+  animation: marqueeBottom 60s linear infinite;
+  &.to-r{
+    animation: marqueeRight 60s linear infinite;
+  }
+}
+.marquee-item{
+  width: 300px;
+  height: 300px;
+  display: block;
+  transition: all .2s ease-out;
+  img{
+    height:300px;
+    width: 300px;
+    object-fit: cover;
+  }
+  .marquee-link {
+    position: relative;
+    transition: .3s ease-in-out;
+    display: block;
+    &::before{
+        content: '';
+        background-image: url("/static/svg/instagram.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #00000070;
+        opacity: 0;
+        transition: .3s ease-in-out;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+@keyframes marqueeTop{
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -200%;
+  }
+}
+@keyframes marqueeBottom{
+  0% { 
+    top: -200%; 
+  }
+  100% {
+   top: 0; 
+  }
+}
+.scroll-down-btn{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 30px;
+  left: 50px;
+  z-index: 10;
+  cursor: default;
+  text-decoration: none;
+  color:  $white;
+  @media screen and (max-width: 991px){
+    display: none;
+  }
+  span{
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    color: $white;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .progress{
+    width: 2px;
+    height: 150px;
+    background-color: $white;
+    position: relative;
+    top: 10px;
+    left: 0px;
+    .bar{
+      width: 2px;
+      background-color: $pink;
+      -webkit-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+      }
+    }
+  }

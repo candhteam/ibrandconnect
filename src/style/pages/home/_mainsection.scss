@@ -1,0 +1,126 @@
+.main-section{    
+    .container-1{
+        .banner-headingwrapper{
+            .bannerheading{
+                width: 100%;
+                max-width: 750px;
+                font-size: 50px;
+                line-height: 75px;
+                font-weight: $regular;
+                font-family: $font-1;
+                color: $white;
+                margin-bottom: 40px;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 25px;
+                }
+                .bannerheading__span{
+                    position: relative;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 125px;
+                        height: 10px;
+                        background-image: url("/static/svg/headingline.svg");
+                        position: absolute;
+                        bottom: -7px;
+                        background-repeat: no-repeat;
+                        @media screen and(max-width: 767px){
+                            display: none;
+                        }
+                    }
+                }
+                @media screen and (max-width: 991px) {
+                    max-width: none;
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                @media screen and (max-width: 767px) {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                @media screen and (max-width: 479px) {
+                    font-size: 25px;
+                    line-height: 35px;
+                }
+            }
+        }
+        .banner-button{
+            position: relative;
+            display: inline-block;
+            width: auto; 
+            height: auto;
+            background-color: $pink;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+            span{
+                position: relative;
+                display: inline-block;
+                font-size: 25px;
+                line-height: 35px;
+                font-weight: $medium;
+                color: $white;
+                top: 0; 
+                left: 0;
+                width: 100%;
+                padding: 22px 78px;
+                transition: 0.3s;
+                @media screen and (max-width: 479px){
+                    padding: 10px 25px;
+                    font-size: 18px;
+                    line-height: 23px;
+                    font-weight: $medium;
+                }
+            }
+            &:hover{
+                background-color: #af2e46;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 20px;
+                line-height: 25px;
+            }
+            @media screen and (max-width: 479px) {
+                font-size: 18px;
+                line-height: 23px;
+            }
+        }
+    }
+}
+.main-section2{
+    .container-1{
+        .para-wrapper{
+            padding-top: 125px;
+            @media screen and (max-width:1250px){
+                padding-top: 67px;
+              }
+            @media screen and (max-width: 991px){
+                padding-top: 67px;
+            }
+             @media screen and (max-width: 767px){
+                padding-top: 100px;
+            }
+            @media screen and (max-width: 479px){
+                padding-top: 50px;
+            }
+            .section-para{
+                color: $white;
+                font-size: 20px;
+                line-height: 32px;
+                font-weight: $regular;
+                width: 755px;
+                margin-bottom: 50px;
+                @media screen and (max-width: 991px){
+                    font-size: 18px;
+                    line-height: 26px;
+                    width: 100%;
+                }
+                @media screen and (max-width: 767px){
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

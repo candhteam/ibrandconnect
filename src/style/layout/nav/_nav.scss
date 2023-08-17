@@ -1,0 +1,147 @@
+.navbar{
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-top: 115px;
+    margin-bottom: 130px;
+    @media screen and (max-width: 991px){
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    @media screen and (max-width: 767px){
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    @media screen and (max-width: 479px){
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .container-1{
+        .nav-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .navbar__brand{
+                text-decoration: none;
+                .logo{
+                    width: 100%;
+                    max-width: 250px;
+                    @media  screen and (max-width: 479px){
+                        max-width: 200px;
+                    }
+                    .logo-text{
+                        color: $white;
+                        font-family: $font-1;
+                        font-size: 25px;
+                        line-height: 31px;
+                        font-weight: $medium;
+                        margin-bottom: 0;
+                        @media screen and (max-width: 1790px){
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        @media screen and (max-width: 1300px){
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        @media screen and (max-width: 991px){
+                            font-size: 20px;
+                            line-height: 26px;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        @media screen and (max-width: 767px){
+                            font-size: 18px;
+                            line-height: 24px;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        @media screen and (max-width: 479px){
+                            font-size: 15px;
+                            line-height: 22px;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .logo-span{
+                            color: $pink;
+                        }
+                    }
+                }
+            }
+            .navlink-wrapper{
+                display: flex;
+                align-items: center;
+                .navbarmenu{
+                    padding-right: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    list-style: none;
+                    margin-bottom: 0px;
+                    padding-left: 0px;
+                    padding-left: 50px;
+                    &__item{
+                        a{
+                            color: $white;
+                            text-decoration: none;
+                            font-weight: $medium;
+                            font-size: 16px;
+                            line-height: 29px; 
+                            padding-right: 80px; 
+                            white-space: nowrap;
+                            transition: 0.3s ease-in-out;
+                            &:hover{
+                                opacity: 0.5;
+                            }
+                            @media screen and (max-width: 1790px){
+                                padding-right: 50px;
+                            }  
+                            @media screen and (max-width:991px){
+                                padding-right: 20px;
+                                font-size: 15px;
+                                line-height: 28px;
+                            }                        
+                        }
+                    }
+                }
+                .navbutton{
+                    position: relative;
+                    display: inline-block;
+                    width: auto; 
+                    height: auto;
+                    background-color: $pink;
+                    padding: 13px 45px;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    transition: 0.3s ease-in-out;
+                    span{
+                        position: relative;
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: $medium;
+                        line-height: 19px;
+                        color: $white;
+                        top: 0; 
+                        left: 0;
+                        width: 100%;
+                        white-space: nowrap;
+                        transition: 0.3s;
+                        @media screen and(max-width: 479px) {
+                            display: none;
+                        }
+                    }
+                    &:hover{
+                        background-color: #af2e46;
+                    }
+                    @media screen and(max-width: 991px) {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+                @media screen and (max-width: 479px){
+                    display: none;
+                }
+            }
+        }
+    }
+}

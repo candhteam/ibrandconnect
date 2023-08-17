@@ -1,0 +1,96 @@
+.our-purpose{
+    padding-bottom: 102px;
+    @media screen and (max-width: 991px){
+        padding-bottom: 75px;
+    }
+    @media screen and (max-width: 479px){
+        padding-bottom: 55px;
+    }
+    .container-1{
+        .our-col-heading{
+            padding: 68px 0 63px 0;
+            @media screen and (max-width: 991px) {
+                padding: 58px 0 30px 0;
+            }
+            @media screen and (max-width: 767px) {
+                padding: 50px 0 30px 0;
+            }
+            @media screen and (max-width: 479px) {
+                padding: 40px 0 20px 0;
+            }
+            h3{
+                font-size: 35px;
+                line-height: 42px;
+                color:$white;
+                font-weight: $bold;
+                margin-bottom: 10px;
+                @media screen and (max-width: 767px){
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+                @media screen and (max-width: 479px){
+                    font-size: 22px;
+                    line-height: 35px;
+                }
+               
+            }
+            p{
+                font-size: 18px;
+                line-height: 24px;
+                color:$white;
+                font-weight: $regular;
+            }
+        }
+        .our-grid-wrap{
+            display: flex;
+            max-width: 1031px;
+            width: 100%;
+            padding-bottom: 76px;
+            @media screen and (max-width: 991px){
+                display: block;
+                padding-bottom: 0px;
+            }
+            .our-col{
+                
+                h2{
+                    font-size: 25px;
+                    line-height: 30px;
+                    color: $pink;
+                    font-weight: $medium;
+                    margin-bottom: 20px;
+                }
+                ul{
+                    padding-left: 1rem;
+                    li{
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: $white;
+                        font-weight: $regular;
+                        padding-bottom: 42px;
+                        max-width: 402px;
+                        width: 100%;
+                        @media screen and (max-width: 991px){
+                            max-width: none;
+                        }
+                        @media screen and (max-width: 767px){
+                            font-size: 16px;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+
+            }
+            .left-space{
+                margin-left: 202px;
+                @media screen and (max-width:991px){
+                    margin-left: 0px;
+                }
+            }
+        }
+        .bottom-border{
+            border-bottom: 1px solid #707070;
+
+        }
+       
+    }
+}

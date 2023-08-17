@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        outline: none;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000 !important;
+    font-family: $font-1;
+    overflow-x: hidden;
+}
+.bodywrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: 991px){
+        flex-direction: column;
+    }
+}
+.container-1{
+    width: 100%;
+    max-width: 1470px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 200px;
+    padding-right: 100px;
+    @media screen and (max-width:1600px){
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+    @media screen and (max-width:991px){
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    @media screen and (max-width: 479px){
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+}
